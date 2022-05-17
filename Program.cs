@@ -54,7 +54,7 @@ void NewMethod(int limit, string answer)
     {
         case "да":
             {
-                string[] arrayInit = { "hello", "2", "world", ":-)" };
+                string[] arrayInit = { "1234", "1567", "-2", "computer science" };
                 Console.WriteLine("Массив из примера задачи");
                 PrintInitArray(arrayInit);
                 Console.WriteLine();
