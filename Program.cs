@@ -39,3 +39,34 @@ void PrintfinalArray(string[] array)
 }
 
 int limit = 3; //максимальное количество символов в строках выводимого массива по условиям задачи.
+
+//в задачи разрешено либо использовать массив введенный вручную, либо уже имеющийся. 
+//Выбран для решения задачи уже имеющийся массив. Пользователю предлагается посмотреть на имеющийся массив.
+
+Console.WriteLine("Напишите 'да', чтобы увидеть первоначальный массив");
+string answer = Console.ReadLine()!;
+
+NewMethod(limit, answer);
+
+void NewMethod(int limit, string answer)
+{
+    switch (answer)
+    {
+        case "да":
+            {
+                string[] arrayInit = { "hello", "2", "world", ":-)" };
+                Console.WriteLine("Массив из примера задачи");
+                PrintInitArray(arrayInit);
+                Console.WriteLine();
+                PrintfinalArray(CreateResult(arrayInit, limit));
+                break;
+            }
+        default:
+            {
+                Console.WriteLine("Введено неверное значение. Приемлим только ответ 'да', отказаться невозможно :)");
+                Console.WriteLine("Пожалуйста, запустите заново программу (необходимо ввести dontnet run) и напишите наконец 'да'");
+                break;
+            }
+    }
+}
+
