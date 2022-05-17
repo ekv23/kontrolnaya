@@ -27,3 +27,15 @@ string[] CreateResult(string[] array, int lim)
     }
     return finalArray;
 }
+// метод выводит обработанный массив
+void PrintfinalArray(string[] array)
+{
+    Console.Write("вот, что получилось: ");
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        if (array[i] != string.Empty) Console.Write($"{array[i]}  ");
+    }
+    Console.Write($"{array[array.Length - 1]}");
+}
+
+int limit = 3; //максимальное количество символов в строках выводимого массива по условиям задачи.
